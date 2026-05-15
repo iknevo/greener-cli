@@ -9,7 +9,14 @@ Fill your GitHub contribution graph with custom, backdated commits.
 ## Install
 
 ```bash
+# From PyPI
 pip install greener
+
+# From GitHub
+pip install git+ssh://git@github.com/iknevo/greener-cli.git
+
+# Or with HTTPS
+pip install git+https://github.com/iknevo/greener-cli.git
 ```
 
 ## Usage
@@ -64,7 +71,7 @@ greener --show-config
 ## Development
 
 ```bash
-git clone https://github.com/user/greener-cli
+git clone git@github.com:iknevo/greener-cli.git
 cd greener-cli
 
 python -m venv venv

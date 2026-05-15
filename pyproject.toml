@@ -29,6 +29,7 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/iknevo/greener-cli"
 Repository = "https://github.com/iknevo/greener-cli"
+Bug Tracker = "https://github.com/iknevo/greener-cli/issues"
 
 [project.scripts]
 greener = "greener.cli:app"
