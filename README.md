@@ -8,16 +8,33 @@ Fill your GitHub contribution graph with custom, backdated commits.
 
 ## Install
 
+Requires Python 3.10+ and Git.
+
+### macOS / Linux
+
 ```bash
-# From PyPI
-pip install greener
-
-# From GitHub
 pip install git+ssh://git@github.com/iknevo/greener-cli.git
+```
 
-# Or with HTTPS
+Or with pipx (recommended to avoid environment conflicts):
+
+```bash
+pipx install git+ssh://git@github.com/iknevo/greener-cli.git
+```
+
+### Windows
+
+```powershell
 pip install git+https://github.com/iknevo/greener-cli.git
 ```
+
+Or with pipx (recommended):
+
+```powershell
+pipx install git+https://github.com/iknevo/greener-cli.git
+```
+
+> **Note:** If `pipx` is not installed on Windows, install it with `pip install pipx` then add `%USERPROFILE%\.local\bin` to your PATH.
 
 ## Usage
 
