@@ -62,10 +62,9 @@ def push_repo(path: Path):
         ["git", "pull", "--rebase"],
         cwd=str(path),
         capture_output=True,
-        check=True,
     )
     subprocess.run(
-        ["git", "push"],
+        ["git", "push", "-u", "origin", "HEAD"],
         cwd=str(path),
         capture_output=True,
         check=True,
