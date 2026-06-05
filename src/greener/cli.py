@@ -10,7 +10,7 @@ from rich.table import Table
 from . import __version__
 from .commits import dry_run_preview, make_commit, random_dates, random_dates_range
 from .config import get_repo_url, set_repo_url, show_config
-from .repo import ensure_repo, pull_repo, push_repo, verify_repo
+from .repo import ensure_repo, push_repo, verify_repo
 
 app = typer.Typer(
     name="greener",
@@ -117,7 +117,6 @@ def main(
         set_repo_url(set_repo)
         _print_success(f"Repo URL set to: {set_repo}")
         repo_path = ensure_repo(set_repo)
-        pull_repo(repo_path)
         _print_success(f"Repo cloned/pulled at: {repo_path}")
         raise typer.Exit()
 
@@ -128,7 +127,6 @@ def main(
         _print_success("Repo URL saved.")
 
     repo_path = ensure_repo(repo_url)
-    pull_repo(repo_path)
     _print_success(f"Ready at: {repo_path}")
 
     if start:

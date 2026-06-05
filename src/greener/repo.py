@@ -28,6 +28,11 @@ def clone_repo(url: str) -> Path:
     safe = sanitize_url(url)
     dest = CACHE_DIR / safe
     if dest.exists():
+        subprocess.run(
+            ["git", "pull"],
+            cwd=str(dest),
+            capture_output=True,
+        )
         return dest
     subprocess.run(
         ["git", "clone", url, str(dest)],
